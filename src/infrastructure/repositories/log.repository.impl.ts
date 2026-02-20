@@ -1,6 +1,6 @@
-import type { LogDatasource } from "../../domain/datasources/log.datasource.ts";
-import type { LogEntity, LogSeverityLevel } from "../../domain/entities/log.entity.ts";
-import { LogRepository } from "../../domain/repository/log.repository.ts";
+import type { LogDatasource } from "../../domain/datasources/log.datasource";
+import type { LogEntity, LogSeverityLevel } from "../../domain/entities/log.entity";
+import { LogRepository } from "../../domain/repository/log.repository";
 
 
 

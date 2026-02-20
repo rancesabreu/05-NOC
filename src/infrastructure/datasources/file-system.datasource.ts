@@ -1,7 +1,7 @@
 import fs from 'fs';
 
-import type { LogDatasource } from "../../domain/datasources/log.datasource.ts";
-import { LogEntity, LogSeverityLevel } from "../../domain/entities/log.entity.ts";
+import type { LogDatasource } from "../../domain/datasources/log.datasource";
+import { LogEntity, LogSeverityLevel } from "../../domain/entities/log.entity";
 
 
 

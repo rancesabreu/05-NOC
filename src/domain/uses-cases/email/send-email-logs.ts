@@ -1,6 +1,6 @@
-import type { EmailService } from "../../../presentation/email/email.sevice.ts";
-import { LogEntity, LogSeverityLevel } from "../../entities/log.entity.ts";
-import type { LogRepository } from "../../repository/log.repository.ts";
+import type { EmailService } from "../../../presentation/email/email.sevice";
+import { LogEntity, LogSeverityLevel } from "../../entities/log.entity";
+import type { LogRepository } from "../../repository/log.repository";
 
 
 interface SendLogEmailUseCase {
@@ -26,7 +26,7 @@ export class SendEmailLogs implements SendLogEmailUseCase {
             const log = new LogEntity({
                 message: `Log email sent`,
                 level: LogSeverityLevel.low,
-                origin: 'send-email-logs.ts',
+                origin: 'send-email-logs',
             })
             this.logRepository.saveLog(log);
             
@@ -36,7 +36,7 @@ export class SendEmailLogs implements SendLogEmailUseCase {
             const log = new LogEntity({
                 message: `${error}`,
                 level: LogSeverityLevel.high,
-                origin: 'send-email-logs.ts',
+                origin: 'send-email-logs',
             })
             this.logRepository.saveLog(log); 
             return false;

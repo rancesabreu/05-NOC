@@ -1,8 +1,8 @@
-import { SendEmailLogs } from "../domain/uses-cases/email/send-email-logs.ts";
-import { FileSystemDatasource } from "../infrastructure/datasources/file-system.datasource.ts";
-import { LogRepositoryImpl } from "../infrastructure/repositories/log.repository.impl.ts";
-import { CronService } from "./cron/cron-service.js";
-import { EmailService } from "./email/email.sevice.ts";
+import { SendEmailLogs } from "../domain/uses-cases/email/send-email-logs";
+import { FileSystemDatasource } from "../infrastructure/datasources/file-system.datasource";
+import { LogRepositoryImpl } from "../infrastructure/repositories/log.repository.impl";
+import { CronService } from "./cron/cron-service";
+import { EmailService } from "./email/email.sevice";
 
 
 const fileSystemLogRepository = new LogRepositoryImpl(
@@ -16,7 +16,7 @@ export class Server {
 
     public static start() {
 
-        console.log('Server started...');
+        console.log('Server started....');
 
         //todo: Mandar Email
         // new SendEmailLogs(
